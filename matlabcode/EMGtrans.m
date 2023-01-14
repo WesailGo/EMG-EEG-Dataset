@@ -28,4 +28,4 @@ for i=1:height
     res.table(i,2:7)=vec(1:6);
 end
 n=res.table;
-save('F://dataset//P2//Squart//outms15k3.mat',"n");
+save('F://EMG-EEG-Dataset//EMG//P3//Hop//outms15k3.mat',"n");
