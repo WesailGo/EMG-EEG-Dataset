@@ -1,16 +1,30 @@
 function onePA = ProcOneAction(Pcode,ActionName)
 sourcePath = "load('..//EMG//";
-ActionPath = strcat(sourcePath,Pcode,"//",ActionName,"//");
-ActionContent = ['inms15k1.mat','inms15k2.mat','inms15k3.mat','outms15k1.mat','outms15k2.mat','outms15k3.mat'];
-onePA = zeros(84,2000,6);
+ActionPath = strcat(sourcePath,Pcode,'//',ActionName,'//');
+% configuration
+ActionContent = ["inms15k1.mat","inms15k2.mat","inms15k3.mat","outms15k1.mat","outms15k2.mat","outms15k3.mat"];
+onesection = 15000;
+secNumber =6;
+channel = 9;
 window = 2000;
 step = 1000;
+% set parameters
+allnumber = onesection*secNumber;
+alldata = zeros(allnumber,channel);
+number = ((allnumber-window)/step)+1;
+onePA = zeros(number,window,channel);
+% get alldata
 for i= 1:1:6
    finalPath = strcat(ActionPath, ActionContent(i), "')");
    oneStructure = eval(finalPath);
-   data = oneStructure.n;
-   for j=1:1:14
-       
-   end
+   temdata = oneStructure.n;
+   alldata((i-1)*onesection+1:i*onesection,:)=temdata(:,2:10);
 end
+% separate alldata
+for j= 1:1:number
+    onePA(j,:,:)=alldata(1+(j-1)*step:window+(j-1)*step,:);
+end
+% save onePA
+savePath = strcat("..//EMG//",Pcode,"//",ActionName,"//","onePA.mat");
+save(savePath,"onePA");
 end
