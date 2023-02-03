@@ -1,7 +1,4 @@
 function wa = WAMP(x,thr)
-% x是时域信号，必须是1位的行向量或者列向量;
-% thr是设定的阈值
-% count是该函数计算信号x过零率的值
  
 % initial value
 wa = 0;
