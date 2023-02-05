@@ -29,4 +29,4 @@ for i=1:height
     res.table(i,8:10)=vec(9:11);
 end
 n=res.table;
-save('F://EMG-EEG-Dataset//EMG//sub7//Stand_with_one_leg_up//outms15k1.mat',"n");
+save('F://EMG-EEG-Dataset//EMG//sub10//Stand_with_one_leg_up//inms15k3.mat',"n");
