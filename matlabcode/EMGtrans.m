@@ -29,4 +29,11 @@ for i=1:height
     res.table(i,8:10)=vec(9:11);
 end
 n=res.table;
-save('F://EMG-EEG-Dataset//EMG//sub10//Run//inms15k1.mat',"n");
+save('F://EMG-EEG-Dataset//EMG//sub3//Stand_with_one_leg_back//outms15k1.mat',"n");
+data=n(:,2:10);
+figure(1)
+for i=1:1:9
+    subplot(9,1,i)
+    plot(data(:,i))
+    axis([0 15000 -200 200]);
+end
