@@ -26,4 +26,4 @@ for i=1:1:actionNumber
     label((i-1)*numberOfoneAction+1:i*numberOfoneAction,:)=i-1;
 end
 save("..//EMG//Predataset.mat","Predataset");
-save("..//EMG//label.mat","label");
+save("..//EMG//datasets//label.mat","label");

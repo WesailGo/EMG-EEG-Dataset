@@ -26,7 +26,7 @@ for i=1:1:num
     end
     finalDataset(i,:,:,:)=oneslip;
 end
-firstSave = "save('..//EMG//";
+firstSave = "save('..//EMG//datasets//";
 LastSave = "','finalDataset');";
 SavePath = strcat(firstSave,DatasetName,LastSave);
 eval(SavePath);
