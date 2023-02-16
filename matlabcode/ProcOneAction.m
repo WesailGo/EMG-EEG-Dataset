@@ -1,8 +1,9 @@
 function onePA = ProcOneAction(Pcode,ActionName)
 sourcePath = "load('..//EMG//";
 ActionPath = strcat(sourcePath,Pcode,'//',ActionName,'//');
+config =load("configuration.mat");
+ActionContent = config.configuration.fileName;
 % configuration
-ActionContent = ["inms15k1.mat","inms15k2.mat","inms15k3.mat","outms15k1.mat","outms15k2.mat","outms15k3.mat"];
 onesection = 15000;
 secNumber =6;
 channel = 9;

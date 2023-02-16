@@ -29,7 +29,7 @@ for i=1:height
     res.table(i,8:10)=vec(9:11);
 end
 n=res.table;
-save('F://EMG-EEG-Dataset//EMG//sub4//Tiptoe_stand//inms15k2.mat',"n");
+save('F://EMG-EEG-Dataset//EMG//sub13//Tiptoe_stand//inms15k1.mat',"n");
 data=n(:,2:10);
 figure(1)
 for i=1:1:9
