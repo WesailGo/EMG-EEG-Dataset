@@ -3,7 +3,7 @@ function getFinalDataset(PersonNum, DatasetName)
 getPreDataset(PersonNum);
 Preset = load("..//EMG//Predataset.mat");
 config =load("configuration.mat");
-num = config.configuration.Prenum;
+num = PersonNum*config.configuration.Prenum;
 dsize = config.configuration.dsize;
 channel = config.configuration.channel;
 windowSize = 200;
