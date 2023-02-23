@@ -1,4 +1,4 @@
-raw = load('F://EMG-EEG-Dataset//EMG//sub2//Squart//outms15k1.mat');
+raw = load('F://EMG-EEG-Dataset//EMG//sub15//Side_leg_lift//outms15k1.mat');
 data=raw.n(:,2:10);
 figure(1)
 for i=1:1:9
